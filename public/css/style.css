@@ -1,0 +1,52 @@
+.body_colour{
+    background-color: rgb(208, 225, 223);
+}
+
+.colours{
+    background-color: rgb(172, 171, 160);
+}
+
+.head{
+    font-weight: bolder;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+.abc{
+    background-color: #91a6a532;
+}
+
+.bcd{
+    background-color: #91a6a532;
+}
+
+.imgdata{
+    margin: -15px;
+}
+
+.topword{
+    font-weight: bolder;
+    text-align: center;
+    font-style: italic;
+    text-transform: uppercase;
+}
+.foot{
+    text-align: center;
+    margin: 0px;
+    padding: 8px;
+    color: beige;
+    font-weight: bolder;
+    /* background-color: #91a6a532; */
+}
+.fonts{
+    font-weight: bolder;
+}
+
+.table_head{
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-size: 50px;
+    color: azure;
+    text-align: center;
+    outline-style:groove;
+}
+

@@ -1,0 +1,43 @@
+<form action="/signup" method="post">
+    <div class="container">
+        <div class="row">
+            <div class="mt-4 col-md-6 offest-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="text text-center">Signup Form</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Firstname</label>
+                            <input type="text" class="form-control" name="firstname">
+                        </div>
+                        <div class="form-group">
+                            <label>lastname</label>
+                            <input type="text" class="form-control" name="lastname">
+                        </div>
+                        <div class="form-group">
+                            <label>email</label>
+                            <input type="text" class="form-control" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label>password</label>
+                            <input type="password" class="form-control" name="password">
+                        </div>
+                        <div class="form-group">
+                            <label>contact</label>
+                            <input type="text" class="form-control" name="contact">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <% if(message){%>
+                            <h5 class="text text-center text-danger">
+                                <%= message;%>
+                            </h5>
+                        <%}%>
+                        <button class="btn btn-primary" type="submit">singup</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

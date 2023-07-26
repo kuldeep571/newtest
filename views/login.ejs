@@ -1,0 +1,31 @@
+<form action="/login" method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offest-3 mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h1>Login Form</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>email</label>
+                            <input type="text" class="form-control" name="email">
+                        </div>
+                        <div class="form-group">
+                            <label>password</label>
+                            <input type="password" class="form-control" name="password">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <% if(message){%>
+                            <h5 class="text text-center text-danger">
+                                <%= message;%>
+                            </h5>
+                        <%}%>
+                        <button class="btn btn-primary" type="submit">login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,35 @@
+
+<form action="/updateuser?updateid=<%= user.id;%>" method="post">
+    <div class="container">
+        <div class="row">
+            <div class="mt-4 col-md-6 offest-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="text text-center">EDIT USER</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Firstname</label>
+                            <input type="text" class="form-control" name="firstname" value="<%= user.firstname;%>">
+                        </div>
+                        <div class="form-group">
+                            <label>lastname</label>
+                            <input type="text" class="form-control" name="lastname" value="<%= user.lastname;%>">
+                        </div>
+                        <div class="form-group">
+                            <label>email</label>
+                            <input type="text" class="form-control" name="email" value="<%= user.email;%>">
+                        </div>
+                        <div class="form-group">
+                            <label>contact</label>
+                            <input type="text" class="form-control" name="contact" value="<%= user.contact;%>">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary" type="submit">UPDATE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

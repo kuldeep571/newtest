@@ -1,0 +1,51 @@
+<table class="table table-borderd table-hover table-striped table-success mt-4">
+    <thead>
+        <tr>
+            <th>s.no</th>
+            <th>profile</th>
+            <th>title</th>
+            <th>price</th>
+            <th>description</th>
+            <th>quantity</th>
+            <th>Edit/Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% for(let i=0; i < pro.length; i++){%>
+        <tr>
+            <td><%= i+1;%></td>
+            <td>
+                <img src="/image/<%= pro[i].profile%>" height="50px" width="50px">
+            </td>
+            <td><%= pro[i].title;%></td>
+            <td><%= pro[i].price;%></td>
+            <td><%= pro[i].description;%></td>
+            <td><%= pro[i].quantity;%></td>
+            <td>
+                <a href="/editpro?editid=<%= pro[i].id;%>" class="btn btn-primary">Edit</a>
+                <a href="/deletepro?deleteid=<%= pro[i].id;%>" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+        <%}%>
+    </tbody>
+</table>
+<!-- 
+<div class="container">
+    <div class="row">
+        <% for(let i=0; i < pro.length; i++){%>
+        <div class="col-md-4 mt-4">
+            <div class="card">
+                <div class="card-header">
+                    <%= pro[i].title%>
+                </div>
+                <div class="card-body">
+                    <img src="/image/<%= pro[i].profile;%>" height="250" width="100%">
+                </div>
+                <div class="card-footer">
+                    <%= pro[i].price%>
+                </div>
+            </div>
+        </div>
+        <%}%>
+    </div>
+</div> -->

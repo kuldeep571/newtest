@@ -1,0 +1,44 @@
+<form action="" method="post" enctype="multipart/form-data">
+    <div class="container">
+        <div class="row">
+            <div class="mt-4 col-md-6 offest-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h1 class="text text-center">Create product</h1>
+                    </div>
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label>Title</label>
+                            <input type="text" class="form-control" name="title">
+                        </div>
+                        <div class="form-group">
+                            <label>Price</label>
+                            <input type="text" class="form-control" name="price">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Quintity</label>
+                            <input type="text" class="form-control" name="quantity">
+                        </div>
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea name="description" class="form-control"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label>Profile</label>
+                            <input type="file" class="form-control" name="profile">
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <% if(message){%>
+                            <h5 class="text text-center text-danger">
+                                <%= message;%>
+                            </h5>
+                        <%}%>
+                        <button class="btn btn-primary" type="submit">create</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body class="body_colour">
+    <nav class="navbar navbar-expand-lg colours navbar-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <h2>MY PROJECT</h2>
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <%if(!userloggedin){%>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/signup">signup</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/login">Login</a>
+              </li>
+              <%}else{%>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="/product">Create product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="/userpro">user product</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="/userlist">userlist</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-light" href="/logout" onclick="confirm('you want to logout')" >logout</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link profile_set text-light" href="/profile">profile</a>
+              </li>
+              <%}%>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <%- include(pagename)%>
+      <!-- <footer class="text-center text-lg-start colours text-muted mt-4">
+          <p class="foot">COPY RIGHT BY & SBN</p>
+      </footer> -->
+</body>
+</html>
