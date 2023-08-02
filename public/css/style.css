@@ -30,14 +30,17 @@
     text-transform: uppercase;
 }
 .foot{
+    background-color: cadetblue;
     text-align: center;
-    margin: 0px;
+    margin-top: auto;
     padding: 8px;
-    color: beige;
+    color: rgb(35, 35, 8);
     font-weight: bolder;
-    /* background-color: #91a6a532; */
 }
 .fonts{
+    margin: 0px;
+}
+#fontsize{
     font-weight: bolder;
 }
 
@@ -49,4 +52,15 @@
     text-align: center;
     outline-style:groove;
 }
+
+body{
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
+}
+
+footer p{
+    margin: 0px;
+}
+
 

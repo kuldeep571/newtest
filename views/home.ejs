@@ -2,18 +2,19 @@
     <h3 class="text text-center mt-4">All NEW PRODUCT</h3>
     <div class="row">
         <% for(let i=0; i < pro.length; i++){%>
-        <div class="col-md-3 margin">
-            <div class="card mt-4">
+        <div class="col-md-3">
+            <div class="card mt-4 mb-4">
                 <div class="card-header abc">
                     <p class="head"><%= pro[i].title;%></p>
                 </div>
                 <div class="card-body imgdata">
                     <img src="/image/<%= pro[i].profile%>" height="210px" width="100%">
                 </div>
-                <div class="card-footer bcd">
+                <div class="card-footer footers">
                     <div class="row">
                         <div class="col-6">
-                            <p class="fonts">PRICE <%= pro[i].price;%>/-</p>
+                            <p class="fonts"><%= pro[i].description;%></p>
+                            <p class="fonts" id="fontsize">PRICE <%= pro[i].price;%>/-</p>
                         </div>
                         <div class="col-6">
                             <a href="#" class="btn btn-primary">Buy Now</a>

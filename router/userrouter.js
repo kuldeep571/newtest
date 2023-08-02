@@ -37,8 +37,7 @@ app.get("/edituser", usercontroller.edituser)
 
 app.post("/updateuser", usercontroller.updateuser)
 
-
-
+app.get("/profile", usercontroller.profile)
 
 
 

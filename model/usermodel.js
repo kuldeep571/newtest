@@ -67,10 +67,10 @@ class usermodel{
         })
     }
 
-    async userpro(){
+    async userpro(data){
         return new Promise(function(resolve, reject){
-            const deletedata = `SELECT * FROM product where userid = '${1}'`;
-            db.connection.query(deletedata, function(error, result){
+            const getlogindata = `SELECT * FROM product where userid = '${data.isUserLogin}'`;
+            db.connection.query(getlogindata, function(error, result){
                 if(error){
                     reject(error);
                 }else{
@@ -161,5 +161,20 @@ class usermodel{
             })
         })
     }
+
+    
+    async profile(data){
+        return new Promise(function(resolve, reject){
+            const getproid = `SELECT * FROM test where id = '${data.isUserLogin}'`;
+            db.connection.query(getproid, function(error, result){
+                if(error){
+                    reject(error);
+                }else{
+                    resolve(result);
+                }
+            })
+        })
+    }
+
 }
 module.exports = new usermodel();

@@ -147,6 +147,7 @@ class usercontroller {
     logout(req, res) {
         if (req.session.isuserloggedin) {
             delete req.session.isuserloggedin;
+            res.clearCookie("isUserLogin");
         }
         res.redirect("/home")
     }
@@ -190,8 +191,7 @@ class usercontroller {
         if(req.session.isuserloggedin){
             pagedata.userloggedin = true;
         }
-        let result = await userService.userpro();
-        console.log("result", result);
+        let result = await userService.userpro(req, res);
         pagedata.pro = result;
         res.render("template", pagedata);
     }
@@ -248,6 +248,24 @@ class usercontroller {
            }
            await userService.updateuser(req, res);
            res.redirect('/userlist');
+        } catch (error) {
+            console.log(error);
+        }
+    }
+
+    async profile(req, res) {
+        try {
+            const pagedata = {
+                title: "profile",
+                pagename: "profile",
+                userloggedin: false
+            }
+            if(req.session.isuserloggedin){
+                pagedata.userloggedin = true;
+            }
+           let result=await userService.profile(req, res);
+           pagedata.pro = result;
+           res.render('template', pagedata);
         } catch (error) {
             console.log(error);
         }

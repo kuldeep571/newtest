@@ -104,9 +104,9 @@ class userService{
         return result;
     }
 
-    async userpro(){
-        let result = await usermodel.userpro();
-        console.log('hkhkdhhjhk', result);
+    async userpro(req, res){
+        const data = req.cookies;
+        let result = await usermodel.userpro(data);
         return result;
     }
 
@@ -137,6 +137,13 @@ class userService{
             contact: req.body.contact
         }
         let result = await usermodel.updateuser(userdata, updateid);
+        return result;
+    }
+
+    async profile(req, res){
+        const data = req.cookies;
+        let result=await usermodel.profile(data);
+        console.log("result^^^^^^", result)
         return result;
     }
 }
